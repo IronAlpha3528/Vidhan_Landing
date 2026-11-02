@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="maroonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B91C3C"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+  </defs>
+  <!-- Sleek dynamic vortex swirl -->
+  <path d="M24 4C12.954 4 4 12.954 4 24C4 28.5 5.5 32.7 8 36L14 30C12.7 28.3 12 26.2 12 24C12 17.373 17.373 12 24 12C28.2 12 31.9 14.2 34 17.5L40 11.5C36.1 6.9 30.4 4 24 4Z" fill="url(#blueGrad)"/>
+  <path d="M24 44C35.046 44 44 35.046 44 24C44 19.5 42.5 15.3 40 12L34 18C35.3 19.7 36 21.8 36 24C36 30.627 30.627 36 24 36C19.8 36 16.1 33.8 14 30.5L8 36.5C11.9 41.1 17.6 44 24 44Z" fill="url(#maroonGrad)"/>
+  <circle cx="24" cy="24" r="5" fill="#2563EB"/>
+</svg>

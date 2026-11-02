@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-electric-blue: #2563EB;
+    --color-deep-maroon: #B91C3C;
+    --color-dark-navy: #0B1B3A;
+    --color-light-blue: #E6EEFF;
+    --color-soft-neutral: #F8FAFC;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #0B1B3A;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background-color: #2563EB;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .glass-card-dark {
+    background: rgba(11, 27, 58, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+  }
+
+  .bg-radial-vortex {
+    background: radial-gradient(circle at 60% 40%, rgba(37, 99, 235, 0.12) 0%, rgba(185, 28, 60, 0.06) 45%, transparent 70%);
+  }
+
+  .bg-grid-pattern {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(11, 27, 58, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 27, 58, 0.03) 1px, transparent 1px);
+  }
+
+  .text-gradient-blue-maroon {
+    background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 35%, #F43F5E 75%, #BE123C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-subtle {
+    background: linear-gradient(135deg, #0B1B3A 30%, #2563EB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Dedicated Direct Dark Mode Overrides (Guaranteed Instant HMR & Zero-Config Reload) */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #060E1E !important;
+  color: #F8FAFC !important;
+}
+
+html.dark #hero {
+  background-color: #060E1E !important;
+}
+
+html.dark #hero h1,
+html.dark #opportunity h2,
+html.dark #services h2,
+html.dark #process h2 {
+  color: #FFFFFF !important;
+}
+
+html.dark #hero p,
+html.dark #opportunity p,
+html.dark #services p,
+html.dark #process p {
+  color: #94A3B8 !important;
+}
+
+html.dark #hero #hero-explore-cta {
+  background-color: #0F2248 !important;
+  color: #FFFFFF !important;
+  border-color: #1E293B !important;
+}
+
+html.dark #opportunity {
+  background-color: #09152C !important;
+  border-color: #1E293B !important;
+}
+
+html.dark #opportunity .bg-white {
+  background-color: #0F2248 !important;
+  border-color: #1E293B !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #opportunity h3 {
+  color: #FFFFFF !important;
+}
+
+html.dark #services {
+  background-color: #060E1E !important;
+}
+
+html.dark #process {
+  background-color: #09152C !important;
+  border-color: #1E293B !important;
+}
+
+html.dark #process .bg-white {
+  background-color: #0F2248 !important;
+  border-color: #1E293B !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #process h3,
+html.dark #process h4 {
+  color: #FFFFFF !important;
+}
+
+html.dark header.bg-white\/90 {
+  background-color: rgba(6, 14, 30, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark nav.bg-slate-50\/80 {
+  background-color: rgba(15, 34, 72, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark nav a {
+  color: #94A3B8 !important;
+}
+
+html.dark nav a:hover {
+  color: #FFFFFF !important;
+}
+
+html.dark nav a .bg-white {
+  background-color: #060E1E !important;
+  border-color: #1E293B !important;
+}
+
+html.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px) !important;
+}
+
+/* Smooth motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
